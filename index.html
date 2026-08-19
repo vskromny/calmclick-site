@@ -2,52 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.className += " js";</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CalmClick — calm answers for confusing screens</title>
   <meta name="description" content="Not sure about a text, letter, or pop-up? Take a photo and CalmClick explains it in plain words — calmly, privately, in your language.">
   <link rel="icon" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#F6F8FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10151D" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="CalmClick — calm answers for confusing screens">
   <meta property="og:description" content="Take a photo of anything confusing — a text, a bill, a scary pop-up — and get a calm, plain-language explanation.">
   <meta property="og:image" content="icon.png">
+  <meta property="og:type" content="website">
 </head>
 <body>
 
-<header class="site">
+<header class="site" id="siteHeader">
   <div class="wrap">
-    <img src="icon.png" alt="">
-    <span class="name">CalmClick</span>
+    <a class="brand" href="#top">
+      <img src="icon.png" alt="">
+      <span class="name">CalmClick</span>
+    </a>
     <nav>
       <a href="#how">How it works</a>
+      <a href="#features">Features</a>
       <a href="#privacy">Privacy</a>
       <a href="#support">Support</a>
     </nav>
+    <a class="appstore appstore--sm" href="https://apps.apple.com/us/app/calmclick/id6783985536" target="_blank" rel="noopener">
+      <svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+      <span class="labels"><small>Download on the</small><strong>App Store</strong></span>
+    </a>
   </div>
 </header>
 
-<div class="hero wrap">
-  <img class="icon" src="icon.png" alt="CalmClick app icon">
-  <h1>Calm answers for confusing screens</h1>
-  <p class="lead">A strange text. A bill that looks odd. A scary pop-up. Take a photo, and CalmClick explains what it is in plain, simple words — and tells you what to do next.</p>
-  <div class="chip">🔒 Private — your results stay on your phone</div>
-</div>
+<main id="top">
+
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span></div>
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <span class="badge reveal">Now on the App&nbsp;Store · iPhone &amp; iPad</span>
+      <h1 class="reveal">Calm answers for confusing screens</h1>
+      <p class="lead reveal">A strange text. A bill that looks odd. A scary pop&#8209;up. Take a photo, and CalmClick explains what it is in plain, simple words — and tells you exactly what to do next.</p>
+
+      <div class="cta-row reveal">
+        <a class="appstore" href="https://apps.apple.com/us/app/calmclick/id6783985536" target="_blank" rel="noopener">
+          <svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="labels"><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+        <a class="ghost-btn" href="#how">See how it works</a>
+      </div>
+
+      <ul class="trust reveal">
+        <li>🔒 Results stay on your phone</li>
+        <li>🙅 No accounts, no ads</li>
+        <li>🌍 Answers in your language</li>
+      </ul>
+    </div>
+
+    <div class="hero-device reveal">
+      <div class="stage anim" aria-hidden="true">
+        <div class="stage-glow"></div>
+
+        <div class="phone">
+          <div class="screen">
+            <div class="statusbar"><span>9:41</span><span class="dots">▮▮ ▮</span></div>
+
+            <div class="appbar">
+              <img src="icon.png" alt="">
+              <span>CalmClick</span>
+            </div>
+
+            <div class="viewfinder">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+              <div class="vf-hint">Point at anything confusing</div>
+            </div>
+
+            <div class="scanline"></div>
+
+            <div class="snap">
+              <span class="snap-btn"></span>
+              <span class="snap-label">Take a photo</span>
+            </div>
+            <div class="reading"><span class="spinner"></span>Reading it calmly…</div>
+
+            <div class="result">
+              <div class="verdict-pill">🛑 Looks like a scam</div>
+              <p class="result-title">This is a fake delivery text.</p>
+              <ul class="result-list">
+                <li class="ln l1"><b>Don't</b> tap the link.</li>
+                <li class="ln l2"><b>Don't</b> enter card details.</li>
+                <li class="ln l3"><b>Do</b> delete it — nothing will happen.</li>
+              </ul>
+              <div class="result-actions"><span>💬 Follow-up</span><span>↗ Share</span></div>
+              <div class="result-foot">Saved on this phone only</div>
+            </div>
+
+            <div class="homebar"></div>
+          </div>
+
+          <div class="flash"></div>
+        </div>
+
+        <div class="shot">
+          <div class="shot-head"><span class="av"></span>Unknown number</div>
+          <div class="bubble">Your parcel is being held. Pay the £1.99 customs fee now:<span class="link">bit.ly/pk-4a9x</span></div>
+          <div class="bubble small">Final notice — delivery will be returned today.</div>
+          <div class="bubble small">Reply STOP to opt out.</div>
+          <div class="shot-flare"></div>
+        </div>
+
+        <div class="steps">
+          <span class="step s1">1 · Take a photo</span>
+          <span class="step s2">2 · CalmClick reads it</span>
+          <span class="step s3">3 · A calm, clear answer</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <section id="how" class="wrap">
-  <h2>How it works</h2>
-  <p class="sub">Three steps. About ten seconds. No accounts, no jargon.</p>
+  <h2 class="reveal">How it works</h2>
+  <p class="sub reveal">Three steps. About ten seconds. No accounts, no jargon.</p>
   <div class="cards">
-    <div class="card">
+    <div class="card reveal">
       <span class="num">1</span>
       <h3>Take a photo</h3>
       <p>Point your phone at anything confusing — a message, a letter, an email, a pop-up — or upload a screenshot.</p>
     </div>
-    <div class="card">
+    <div class="card reveal">
       <span class="num">2</span>
       <h3>Get a calm explanation</h3>
       <p>CalmClick tells you what it is in plain words, in your language — never alarmist, never technical.</p>
     </div>
-    <div class="card">
+    <div class="card reveal">
       <span class="num">3</span>
       <h3>Know what to do</h3>
       <p>Clear "what to do" and "what not to do" steps. Still unsure? Ask a follow-up question, or reach someone you trust with one tap.</p>
@@ -56,18 +150,31 @@
 </section>
 
 <section class="wrap">
-  <h2>A simple traffic light, not a lecture</h2>
-  <p class="sub">Every check ends in one of three honest verdicts. When CalmClick isn't sure, it says so — and errs on the side of caution.</p>
+  <h2 class="reveal">A simple traffic light, not a lecture</h2>
+  <p class="sub reveal">Every check ends in one of three honest verdicts. When CalmClick isn't sure, it says so — and errs on the side of caution.</p>
   <div class="verdicts">
-    <div class="verdict safe"><b>✅ Safe</b><span>This looks genuine. Here's what it means.</span></div>
-    <div class="verdict careful"><b>⚠️ Be careful</b><span>This could be a trick. Check before acting.</span></div>
-    <div class="verdict warning"><b>🛑 Warning</b><span>This looks like a scam. Don't tap, don't pay, don't reply.</span></div>
+    <div class="verdict safe reveal"><b>✅ Safe</b><span>This looks genuine. Here's what it means.</span></div>
+    <div class="verdict careful reveal"><b>⚠️ Be careful</b><span>This could be a trick. Check before acting.</span></div>
+    <div class="verdict warning reveal"><b>🛑 Warning</b><span>This looks like a scam. Don't tap, don't pay, don't reply.</span></div>
+  </div>
+</section>
+
+<section id="features" class="wrap">
+  <h2 class="reveal">Built for real life</h2>
+  <p class="sub reveal">Designed with — and for — people who'd rather ask than risk it.</p>
+  <div class="features">
+    <div class="feature reveal"><span class="fi">🗣️</span><h3>Your language</h3><p>Answers come back in the language you speak, not in technical English.</p></div>
+    <div class="feature reveal"><span class="fi">💬</span><h3>Ask a follow-up</h3><p>Still unsure? Ask "is this really from my bank?" and get a plain reply.</p></div>
+    <div class="feature reveal"><span class="fi">👨‍👩‍👧</span><h3>Share with someone you trust</h3><p>Send the explanation to family with one tap — no screenshots needed.</p></div>
+    <div class="feature reveal"><span class="fi">🔠</span><h3>Big, calm type</h3><p>Large text, high contrast, and no flashing alarms. Ever.</p></div>
+    <div class="feature reveal"><span class="fi">📁</span><h3>Your checks, saved</h3><p>Look back at anything you've checked — stored on your device only.</p></div>
+    <div class="feature reveal"><span class="fi">🚫</span><h3>No ads, no tracking</h3><p>Nothing to sign up for. Nothing watching you in the background.</p></div>
   </div>
 </section>
 
 <section id="privacy" class="wrap">
-  <h2>Privacy comes first</h2>
-  <div class="privacy-banner">
+  <h2 class="reveal">Privacy comes first</h2>
+  <div class="privacy-banner reveal">
     <p><strong>CalmClick is built for people who are careful about their phone — so it's careful too.</strong></p>
     <ul>
       <li><strong>No monitoring, ever.</strong> CalmClick never reads your texts, calls, or email. It only sees a photo you choose to take.</li>
@@ -78,18 +185,61 @@
   </div>
 </section>
 
-<section id="support" class="wrap support-box">
-  <h2>Questions or need help?</h2>
-  <p class="sub">We answer every message — plainly, like everything else.</p>
-  <a class="button" href="mailto:v.skromny@gmail.com?subject=CalmClick%20support">Email CalmClick support</a>
+<section class="wrap">
+  <div class="cta-band reveal">
+    <img class="cta-icon" src="icon.png" alt="CalmClick app icon">
+    <h2>Peace of mind, one photo away</h2>
+    <p>Free to download. No account needed.</p>
+    <a class="appstore appstore--lg" href="https://apps.apple.com/us/app/calmclick/id6783985536" target="_blank" rel="noopener">
+      <svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+      <span class="labels"><small>Download on the</small><strong>App Store</strong></span>
+    </a>
+  </div>
 </section>
+
+<section id="support" class="wrap support-box">
+  <h2 class="reveal">Questions or need help?</h2>
+  <p class="sub reveal">We answer every message — plainly, like everything else.</p>
+  <a class="button reveal" href="mailto:v.skromny@gmail.com?subject=CalmClick%20support">Email CalmClick support</a>
+</section>
+
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <p>© 2026 CalmClick · <a href="privacy/">Privacy Policy</a> · <a href="mailto:v.skromny@gmail.com">Contact</a></p>
+    <p>© 2026 CalmClick · <a href="privacy/">Privacy Policy</a> · <a href="https://apps.apple.com/us/app/calmclick/id6783985536" target="_blank" rel="noopener">App Store</a> · <a href="mailto:v.skromny@gmail.com">Contact</a></p>
     <p>CalmClick helps you understand what's on your screen. It doesn't replace advice from your bank, doctor, or the police — when in doubt, contact them directly using a number you trust.</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var header = document.getElementById('siteHeader');
+  var onScroll = function () {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  var items = document.querySelectorAll('.reveal');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    for (var i = 0; i < items.length; i++) items[i].classList.add('in');
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var siblings = e.target.parentNode.querySelectorAll(':scope > .reveal');
+      var idx = Array.prototype.indexOf.call(siblings, e.target);
+      e.target.style.transitionDelay = Math.min(idx, 6) * 70 + 'ms';
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  for (var j = 0; j < items.length; j++) io.observe(items[j]);
+})();
+</script>
 
 </body>
 </html>
