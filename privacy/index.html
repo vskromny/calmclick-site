@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<!--
+  DRAFT — NOT PUBLISHED. Prepared by CalmClick PM 2026-10-21 for CEO legal review (WO-036).
+  Adds the elements the live page was missing: controller identity, legal basis, international
+  transfer basis, OpenAI retention (already present), and rights + complaint authority. DE sister
+  page at /privacy/de/.
+  Before publishing: (1) strip this comment block; (2) bump the effective date to the publish date;
+  (3) confirm the controller contact address (this draft uses v.skromny@gmail.com, matching the live
+  page's Contact line — privacy@calmclick.app is an alternative but its mailbox is unconfirmed);
+  (4) confirm the Standard Contractual Clauses (+ Swiss addendum) are on file in OpenAI's and
+  Vercel's data-processing agreements — NO Data Privacy Framework claim is made here, by decision
+  (DPF status unverified). Relay host named = Vercel Inc. (calmclick-openai-proxy.vercel.app).
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -17,6 +29,7 @@
     <nav>
       <a href="../">Home</a>
       <a href="../#support">Support</a>
+      <a href="de/">Deutsch</a>
     </nav>
   </div>
 </header>
@@ -32,7 +45,7 @@
   <ul>
     <li>CalmClick has <strong>no accounts, no sign-in, no advertising, and no tracking</strong>.</li>
     <li>The app <strong>never monitors your phone</strong>. It never reads your messages, email, calls, contacts, or location. It only sees a photo you deliberately take or choose.</li>
-    <li>Your results and history are <strong>stored only on your device</strong>. We run no servers that store your data.</li>
+    <li>Your results and history are <strong>stored only on your device</strong>; we keep no copy of them on any server.</li>
     <li>A photo you check is <strong>sent securely to an AI service (OpenAI) once, only to be analyzed</strong>, is not used to train AI models, and is deleted by that service after a short safety-review period (up to 30 days under OpenAI's API policy).</li>
   </ul>
 
@@ -41,7 +54,7 @@
   <h2>1. Photos you choose to check</h2>
   <p>When you tap the button and take a photo (or pick one from your library), that photo is sent over an encrypted connection, through our relay server, to OpenAI's API, which reads the image and produces the explanation you see. This is the only moment any data leaves your phone.</p>
   <ul>
-    <li>Our relay server does not store your photo — it passes it along and returns the answer.</li>
+    <li>Our relay server does not store your photo — it passes it along and returns the answer. Like any web service, the relay's host (Vercel) may process ordinary technical connection data, such as your IP address and the time of the request, to run and protect the service.</li>
     <li>OpenAI processes the photo to generate the explanation. Under its API terms, content is <strong>not used to train AI models</strong> and is retained for up to 30 days for abuse monitoring, then deleted. You can read more in OpenAI's own policies.</li>
     <li>A copy of the photo may be saved <strong>on your device</strong> together with the result, so you can look back at it. You can delete it at any time.</li>
   </ul>
@@ -71,6 +84,19 @@
 
   <h2>Children</h2>
   <p>CalmClick is not directed at children under 13 and does not knowingly collect information from them.</p>
+
+  <h2>Who is responsible for your data</h2>
+  <p>CalmClick is made and provided by <strong>Vladimir Skromny</strong>, a private individual based in Switzerland, who is the data controller for the limited processing described in this policy. You can reach the controller at <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>.</p>
+
+  <h2>Our legal basis</h2>
+  <p>For users in the EU and EEA, we rely on the GDPR: we process the photo you submit to carry out the check you have asked for (Article 6(1)(b) — a service you request), and to keep the service secure and prevent misuse (Article 6(1)(f) — our legitimate interest in a safe service). For users in Switzerland, the same processing is governed by the revised Federal Act on Data Protection (nDSG). iOS asks for your consent before the app uses the camera or your photo library.</p>
+
+  <h2>Where your photo is processed</h2>
+  <p>While a photo is being checked, it passes through our relay server, hosted by <strong>Vercel Inc.</strong>, and on to <strong>OpenAI, L.L.C.</strong> Both are companies in the United States, so your photo may be processed there for the short time the check takes. These transfers are covered by the European Commission's <strong>Standard Contractual Clauses</strong>, together with the <strong>Swiss addendum</strong> recognised by the Swiss Federal Data Protection and Information Commissioner. Neither company keeps your photo beyond what is described in section 1 above.</p>
+
+  <h2>Your rights</h2>
+  <p>You can ask to see any personal data relating to you, and to have it corrected, deleted, or its processing restricted; you can object to processing; and you can ask to receive your data in a portable form. Because your checks, history and profile are kept only on your device, you can already view, export and delete all of them yourself inside the app. For the brief processing that happens at OpenAI, email <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a> and we will help.</p>
+  <p>If you believe your data has been handled improperly, you may lodge a complaint with the Swiss Federal Data Protection and Information Commissioner (FDPIC / EDÖB, <a href="https://www.edoeb.admin.ch">www.edoeb.admin.ch</a>) or, in the EU/EEA, with your local data protection authority.</p>
 
   <h2>Changes to this policy</h2>
   <p>If we change this policy, we will update this page and the effective date above. Significant changes will be described in the app's update notes.</p>
