@@ -1,14 +1,25 @@
 <!DOCTYPE html>
+<!--
+  ENTWURF — NICHT VERÖFFENTLICHT. Datenschutzerklärung 1.3.0 (Cloudflare-Worker-Relay + App-ID-Zähler),
+  erstellt 2026-10-28 vom CalmClick PM. Nur lokaler Branch; nie pushen, nie ohne Go des Owners nach main mergen.
+  Vor Veröffentlichung: (1) diesen Kommentar, das ENTWURF-Banner und das robots-noindex-Meta entfernen;
+  (2) "[Veröffentlichungsdatum]" durch das Datum ersetzen (EN + DE); (3) die TODO-Kommentare unten klären.
+-->
+<!-- TODO before publish: owner files Cloudflare DPA (SCCs + Swiss addendum); DPF mention only if re-verified on dataprivacyframework.gov on publish day -->
+<!-- TODO: switch to privacy@calmclick.app only if the domain is acquired -->
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
   <title>Datenschutzerklärung — CalmClick</title>
   <meta name="description" content="Datenschutzerklärung von CalmClick: keine Konten, kein Tracking, Ergebnisse bleiben auf Ihrem Telefon, Fotos werden von OpenAI analysiert, bis zu 30 Tage aufbewahrt und dann gelöscht.">
   <link rel="icon" href="../../icon.png">
   <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
+
+<div style="background:#b3261e;color:#fff;text-align:center;padding:12px 16px;font-weight:700;font-size:18px;">ENTWURF — nicht veröffentlicht. Dieser Text wird noch geprüft und ist nicht die geltende Datenschutzerklärung.</div>
 
 <header class="site">
   <div class="wrap">
@@ -25,7 +36,7 @@
 <div class="wrap">
 <article class="policy">
   <h1>Datenschutzerklärung</h1>
-  <p class="updated">Gültig ab: 21. Oktober 2026</p>
+  <p class="updated">Gültig ab: [Veröffentlichungsdatum]</p>
 
   <p>CalmClick hilft Ihnen, verwirrende Dinge auf Ihrem Bildschirm zu verstehen — verdächtige SMS, seltsame Rechnungen, beängstigende Pop-ups —, indem es ein Foto, das Sie aufnehmen, in einfacher Sprache erklärt. Diese Erklärung beschreibt, in derselben einfachen Sprache, welche Informationen die App verarbeitet und was damit geschieht.</p>
 
@@ -35,14 +46,15 @@
     <li>Die App <strong>überwacht Ihr Telefon niemals</strong>. Sie liest niemals Ihre Nachrichten, E-Mails, Anrufe, Kontakte oder Ihren Standort. Sie sieht nur ein Foto, das Sie bewusst aufnehmen oder auswählen.</li>
     <li>Ihre Ergebnisse und Ihr Verlauf werden <strong>ausschliesslich auf Ihrem Gerät gespeichert</strong>; wir bewahren davon keine Kopie auf irgendeinem Server auf.</li>
     <li>Ein Foto, das Sie prüfen, wird <strong>einmalig und ausschliesslich zur Analyse sicher an einen KI-Dienst (OpenAI) gesendet</strong>, wird nicht zum Training von KI-Modellen verwendet und kann von OpenAI bis zu 30 Tage zur Missbrauchserkennung aufbewahrt werden; danach wird es gelöscht.</li>
+    <li>Damit die kostenlosen Prüfungen fair bleiben, sendet die App mit jeder Prüfung eine <strong>zufällige ID für diese App</strong>, damit unser Relay zählen kann, wie viele Prüfungen pro Tag von einem Telefon kommen. Sie ist weder Ihr Name noch Ihr Konto, wird nicht für Tracking oder Werbung verwendet, und der Zähler wird innerhalb von 2 Tagen nach Ihrer letzten Prüfung gelöscht.</li>
   </ul>
 
   <h2>Welche Informationen die App verarbeitet</h2>
 
   <h2>1. Fotos, die Sie zur Prüfung auswählen</h2>
-  <p>Wenn Sie auf die Schaltfläche tippen und ein Foto aufnehmen (oder eines aus Ihrer Mediathek auswählen), wird dieses Foto über eine verschlüsselte Verbindung, über unseren Relay-Server, an die API von OpenAI gesendet, die das Bild liest und die Erklärung erzeugt, die Sie sehen. Dies ist der einzige Moment, in dem überhaupt Daten Ihr Telefon verlassen.</p>
+  <p>Wenn Sie auf die Schaltfläche tippen und ein Foto aufnehmen (oder eines aus Ihrer Mediathek auswählen), wird dieses Foto über eine verschlüsselte Verbindung, über unseren Relay-Server, an die API von OpenAI gesendet, die das Bild liest und die Erklärung erzeugt, die Sie sehen. Zusammen mit dem Foto sendet die App die in Abschnitt 5 beschriebene zufällige App-ID. Sonst verlässt nichts Ihr Telefon.</p>
   <ul>
-    <li>Unser Relay-Server speichert Ihr Foto nicht — er leitet es weiter und gibt die Antwort zurück. Der Relay verwendet Ihre IP-Adresse kurzzeitig im Arbeitsspeicher, um Missbrauch zu begrenzen (Ratenbegrenzung); sie wird nicht gespeichert. Wie bei jedem Webdienst kann der Host des Relays (Vercel) gewöhnliche technische Verbindungsdaten wie Ihre IP-Adresse und den Zeitpunkt der Anfrage verarbeiten, um den Dienst zu betreiben und zu schützen.</li>
+    <li>Unser Relay-Server <strong>bewahrt keine Kopie Ihres Fotos auf</strong> — er leitet es weiter und gibt die Antwort zurück. Der Relay läuft bei <strong>Cloudflare</strong> (Cloudflare, Inc.). Wie jeder Netzwerkanbieter verarbeitet Cloudflare technische Verbindungsdaten wie Ihre IP-Adresse und den Zeitpunkt der Anfrage, um den Dienst bereitzustellen und zu schützen. Die Protokollierung von Anfragen durch Cloudflare haben wir für unseren Relay ausgeschaltet.</li>
     <li>OpenAI verarbeitet das Foto, um die Erklärung zu erstellen. Gemäss den API-Bedingungen werden Inhalte <strong>nicht zum Training von KI-Modellen verwendet</strong> und bis zu 30 Tage zur Missbrauchserkennung aufbewahrt und danach gelöscht. Mehr dazu finden Sie in den Richtlinien von OpenAI.</li>
     <li>Eine Kopie des Fotos kann zusammen mit dem Ergebnis <strong>auf Ihrem Gerät</strong> gespeichert werden, damit Sie es später ansehen können. Sie können es jederzeit löschen.</li>
   </ul>
@@ -56,12 +68,23 @@
   <h2>4. Vertrauensperson und Profilangaben</h2>
   <p>Wenn Sie (oder ein Familienmitglied) einen Namen, eine Spracheinstellung oder die Telefonnummer oder E-Mail-Adresse einer Vertrauensperson in der App hinterlegen, werden diese Angaben <strong>ausschliesslich auf Ihrem Gerät</strong> gespeichert. Sie werden niemals irgendwohin hochgeladen. Anrufe oder Nachrichten an Ihre Vertrauensperson erfolgen über die normalen Telefon- und Nachrichten-Apps Ihres Telefons.</p>
 
-  <h2>5. Was wir nicht erheben</h2>
+  <h2>5. Eine zufällige ID für diese App, damit kostenlose Prüfungen fair bleiben</h2>
+  <p>Mit jeder Prüfung sendet die App unserem Relay eine zufällige ID, die iOS für diese App erzeugt (Apples «Identifier for Vendor»). Der Relay verwendet sie nur für einen Zweck: um zu zählen, wie viele Prüfungen pro Tag von einem Telefon kommen, damit die kostenlosen Prüfungen für alle fair bleiben und der Dienst vor Missbrauch geschützt ist.</p>
+  <ul>
+    <li>Sie ist <strong>weder Ihr Name noch Ihr Konto, Ihre E-Mail-Adresse oder eine Werbe-ID</strong>. Sie wird nicht für Tracking oder Werbung verwendet.</li>
+    <li>Wir speichern sie nicht zusammen mit Ihrem Foto und verknüpfen sie nicht mit Ihrem Namen oder einem Konto.</li>
+    <li>Sie <strong>wird zurückgesetzt, wenn Sie die App löschen</strong>.</li>
+    <li>Ist die ID nicht verfügbar, zählt der Relay die Prüfungen stattdessen auf dieselbe Weise anhand Ihrer <strong>IP-Adresse</strong>.</li>
+    <li>Der Relay speichert nur die ID (oder IP-Adresse) und die Anzahl der Prüfungen des aktuellen Tages (UTC). Dieser Zähler wird <strong>innerhalb von 2 Tagen (48 Stunden) nach der letzten Prüfung dieses Telefons automatisch gelöscht</strong>.</li>
+  </ul>
+  <p>Die App informiert Sie über diese ID im kurzen Hinweis, den sie vor Ihrer ersten Prüfung anzeigt.</p>
+
+  <h2>6. Was wir nicht erheben</h2>
   <ul>
     <li>Keine Analyse oder Nutzungsverfolgung jeglicher Art.</li>
-    <li>Keine Werbe-IDs, keine Tracker von Dritten.</li>
+    <li>Keine Werbe-IDs, keine Tracker von Dritten. Die einzige Kennung, die die App sendet, ist die zufällige App-ID aus Abschnitt 5.</li>
     <li>Keinen Standort, keine Kontakte, Nachrichten, Anrufprotokolle oder Ihren Browserverlauf.</li>
-    <li>Kein Konto — wir könnten Daten gar nicht mit Ihnen verknüpfen, selbst wenn wir wollten.</li>
+    <li>Kein Konto — Sie müssen uns weder Ihren Namen noch Ihre E-Mail-Adresse angeben, um die App zu nutzen.</li>
   </ul>
 
   <h2>Berechtigungen, um die die App bittet</h2>
@@ -77,13 +100,14 @@
   <p>CalmClick wird von <strong>Vladimir Skromny</strong>, einer Privatperson mit Sitz in der Schweiz, erstellt und bereitgestellt; er ist der Verantwortliche für die in dieser Erklärung beschriebene begrenzte Verarbeitung. Sie erreichen den Verantwortlichen unter <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>.</p>
 
   <h2>Unsere Rechtsgrundlage</h2>
-  <p>Für Nutzerinnen und Nutzer in der EU und im EWR stützen wir uns auf die DSGVO: Wir verarbeiten das von Ihnen übermittelte Foto, um die von Ihnen angeforderte Prüfung durchzuführen (Art. 6 Abs. 1 lit. b — ein von Ihnen angeforderter Dienst), und um den Dienst sicher zu halten und Missbrauch zu verhindern (Art. 6 Abs. 1 lit. f — unser berechtigtes Interesse an einem sicheren Dienst). Für Nutzerinnen und Nutzer in der Schweiz unterliegt dieselbe Verarbeitung dem revidierten Schweizer Datenschutzgesetz (revDSG/nDSG). iOS fragt nach Ihrer Zustimmung, bevor die App die Kamera oder Ihre Fotomediathek verwendet.</p>
+  <p>Für Nutzerinnen und Nutzer in der EU und im EWR stützen wir uns auf die DSGVO: Wir verarbeiten das von Ihnen übermittelte Foto, um die von Ihnen angeforderte Prüfung durchzuführen (Art. 6 Abs. 1 lit. b — ein von Ihnen angeforderter Dienst). Die zufällige App-ID, oder Ihre IP-Adresse, falls keine ID verfügbar ist, verwenden wir, um die Prüfungen pro Telefon und Tag zu zählen; dies stützt sich auf unser berechtigtes Interesse, die kostenlosen Prüfungen fair zu halten und Missbrauch zu verhindern (Art. 6 Abs. 1 lit. f). Für Nutzerinnen und Nutzer in der Schweiz unterliegt dieselbe Verarbeitung dem revidierten Schweizer Datenschutzgesetz (revDSG/nDSG); für den täglichen Zähler stützen wir uns auf unser überwiegendes Interesse an fairer Nutzung und Missbrauchsverhinderung (Art. 31 revDSG/nDSG). iOS fragt nach Ihrer Zustimmung, bevor die App die Kamera oder Ihre Fotomediathek verwendet.</p>
 
   <h2>Wo Ihr Foto verarbeitet wird</h2>
-  <p>Während ein Foto geprüft wird, läuft es über unseren Relay-Server, der von <strong>Vercel Inc.</strong> gehostet wird, und weiter zu <strong>OpenAI, L.L.C.</strong> Beide sind Unternehmen in den Vereinigten Staaten, sodass Ihr Foto dort verarbeitet wird; OpenAI kann es bis zu 30 Tage aufbewahren und löscht es danach. OpenAI stützt sich auf die <strong>Standardvertragsklauseln</strong> in seinen Datenverarbeitungsbedingungen, zusammen mit dem vom Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten anerkannten <strong>Schweizer Zusatz</strong>. Vercel ist <strong>nach dem EU-U.S. und Swiss-U.S. Data Privacy Framework zertifiziert</strong>. Keines der beiden Unternehmen bewahrt Ihr Foto über die in Abschnitt 1 oben beschriebenen kurzen Fristen hinaus auf.</p>
+  <p>Während ein Foto geprüft wird, läuft es über unseren Relay, der von <strong>Cloudflare, Inc.</strong> betrieben wird, und weiter zu <strong>OpenAI, L.L.C.</strong> Beide sind Unternehmen in den Vereinigten Staaten, sodass Ihr Foto dort verarbeitet wird; OpenAI kann es bis zu 30 Tage aufbewahren und löscht es danach; auch der in Abschnitt 5 beschriebene tägliche Zähler liegt bei Cloudflare. OpenAI stützt sich auf die <strong>Standardvertragsklauseln</strong> in seinen Datenverarbeitungsbedingungen, zusammen mit dem vom Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten anerkannten <strong>Schweizer Zusatz</strong>. Cloudflare stützt sich auf die <strong>Standardvertragsklauseln</strong> in seinem Auftragsverarbeitungsvertrag, zusammen mit dem <strong>Schweizer Zusatz</strong>. Keines der beiden Unternehmen bewahrt Ihr Foto über die in Abschnitt 1 oben beschriebenen Fristen hinaus auf.</p>
 
   <h2>Ihre Rechte</h2>
   <p>Sie können Auskunft über alle Sie betreffenden personenbezogenen Daten verlangen sowie deren Berichtigung, Löschung oder die Einschränkung der Verarbeitung; Sie können der Verarbeitung widersprechen; und Sie können verlangen, Ihre Daten in einem übertragbaren Format zu erhalten. Da Ihre Prüfungen, Ihr Verlauf und Ihr Profil ausschliesslich auf Ihrem Gerät gespeichert werden, können Sie all dies bereits selbst in der App einsehen, exportieren und löschen. Für die kurze Verarbeitung, die bei OpenAI stattfindet, schreiben Sie an <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>, und wir helfen Ihnen.</p>
+  <p><strong>Ihr Widerspruchsrecht gegen den täglichen Zähler</strong> (Art. 21 DSGVO; revDSG/nDSG): Sie können jederzeit widersprechen. Praktisch heisst das: Führen Sie einfach keine Prüfungen mehr durch, oder schreiben Sie an <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>. In beiden Fällen wird der Zähler für Ihr Telefon innerhalb von 2 Tagen gelöscht.</p>
   <p>Wenn Sie der Ansicht sind, dass Ihre Daten unrechtmässig verarbeitet wurden, können Sie Beschwerde beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB, <a href="https://www.edoeb.admin.ch">www.edoeb.admin.ch</a>) oder, in der EU/im EWR, bei Ihrer örtlichen Datenschutzbehörde einreichen.</p>
 
   <h2>Änderungen dieser Erklärung</h2>

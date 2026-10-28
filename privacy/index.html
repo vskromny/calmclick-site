@@ -1,14 +1,26 @@
 <!DOCTYPE html>
+<!--
+  DRAFT — NOT PUBLISHED. Privacy policy 1.3.0 draft (Cloudflare Worker relay + per-app ID counter),
+  prepared 2026-10-28 by the CalmClick PM. Local branch only; never push, never merge to main without
+  the owner's go.
+  Before publishing: (1) remove this comment block, the DRAFT banner and the robots noindex meta;
+  (2) replace "[publish date]" with the publish date (EN + DE); (3) confirm the TODO comments below.
+-->
+<!-- TODO before publish: owner files Cloudflare DPA (SCCs + Swiss addendum); DPF mention only if re-verified on dataprivacyframework.gov on publish day -->
+<!-- TODO: switch to privacy@calmclick.app only if the domain is acquired -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
   <title>Privacy Policy — CalmClick</title>
   <meta name="description" content="CalmClick's privacy policy: no accounts, no tracking, results stay on your phone, photos analyzed by OpenAI, kept up to 30 days, then deleted.">
   <link rel="icon" href="../icon.png">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+
+<div style="background:#b3261e;color:#fff;text-align:center;padding:12px 16px;font-weight:700;font-size:18px;">DRAFT — not published. This text is under review and is not the current privacy policy.</div>
 
 <header class="site">
   <div class="wrap">
@@ -25,7 +37,7 @@
 <div class="wrap">
 <article class="policy">
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective date: 21 October 2026</p>
+  <p class="updated">Effective date: [publish date]</p>
 
   <p>CalmClick helps you understand confusing things on your screen — suspicious texts, odd bills, scary pop-ups — by explaining a photo you take in plain language. This policy explains, in the same plain language, what information the app handles and what happens to it.</p>
 
@@ -35,14 +47,15 @@
     <li>The app <strong>never monitors your phone</strong>. It never reads your messages, email, calls, contacts, or location. It only sees a photo you deliberately take or choose.</li>
     <li>Your results and history are <strong>stored only on your device</strong>; we keep no copy of them on any server.</li>
     <li>A photo you check is <strong>sent securely to an AI service (OpenAI) once, only to be analyzed</strong>, is not used to train AI models, and may be kept by OpenAI for up to 30 days for abuse monitoring, then deleted.</li>
+    <li>To keep the free checks fair, the app sends a <strong>random ID for this app</strong> along with each check, so our relay can count how many checks come from one phone each day. It is not your name or account, it is not used for tracking or advertising, and the count is deleted within 2 days after your last check.</li>
   </ul>
 
   <h2>What information the app handles</h2>
 
   <h2>1. Photos you choose to check</h2>
-  <p>When you tap the button and take a photo (or pick one from your library), that photo is sent over an encrypted connection, through our relay server, to OpenAI's API, which reads the image and produces the explanation you see. This is the only moment any data leaves your phone.</p>
+  <p>When you tap the button and take a photo (or pick one from your library), that photo is sent over an encrypted connection, through our relay server, to OpenAI's API, which reads the image and produces the explanation you see. Together with the photo, the app sends the random app ID described in section 5. Nothing else leaves your phone.</p>
   <ul>
-    <li>Our relay server does not store your photo — it passes it along and returns the answer. The relay briefly uses your IP address in memory to limit abuse (rate limiting); it is not stored. Like any web service, the relay's host (Vercel) may process ordinary technical connection data, such as your IP address and the time of the request, to run and protect the service.</li>
+    <li>Our relay server keeps <strong>no copy of your photo</strong> — it passes it along and returns the answer. The relay runs on <strong>Cloudflare</strong> (Cloudflare, Inc.). Like any network provider, Cloudflare processes technical connection data, such as your IP address and the time of the request, to deliver and protect the service. We have switched off Cloudflare's request logging for our relay.</li>
     <li>OpenAI processes the photo to generate the explanation. Under its API terms, content is <strong>not used to train AI models</strong> and is retained for up to 30 days for abuse monitoring, then deleted. You can read more in OpenAI's own policies.</li>
     <li>A copy of the photo may be saved <strong>on your device</strong> together with the result, so you can look back at it. You can delete it at any time.</li>
   </ul>
@@ -56,12 +69,23 @@
   <h2>4. Trusted contact and profile details</h2>
   <p>If you (or a family member) add a name, language preference, or a trusted person's phone or email in the app, those details are stored <strong>only on your device</strong>. They are never uploaded anywhere. Calling or texting your trusted person happens through your phone's normal Phone and Messages apps.</p>
 
-  <h2>5. What we don't collect</h2>
+  <h2>5. A random ID for this app, to keep free checks fair</h2>
+  <p>With each check, the app sends our relay a random ID that iOS creates for this app (Apple's "identifier for vendor"). The relay uses it for one thing only: to count how many checks come from one phone each day, so the free checks stay fair for everyone and the service is protected from misuse.</p>
+  <ul>
+    <li>It is <strong>not your name, account, email, or an advertising ID</strong>. It is not used for tracking or advertising.</li>
+    <li>We do not store it with your photo or link it to your name or account.</li>
+    <li>It <strong>resets if you delete the app</strong>.</li>
+    <li>If the ID is not available, the relay counts checks by your <strong>IP address</strong> instead, in the same way.</li>
+    <li>The relay keeps only the ID (or IP address) and the number of checks for the current day (UTC). This counter is <strong>deleted automatically within 2 days (48 hours) after that phone's last check</strong>.</li>
+  </ul>
+  <p>The app tells you about this ID in the short notice it shows before your first check.</p>
+
+  <h2>6. What we don't collect</h2>
   <ul>
     <li>No analytics or usage tracking of any kind.</li>
-    <li>No advertising identifiers, no third-party trackers.</li>
+    <li>No advertising identifiers, no third-party trackers. The only identifier the app sends is the random app ID in section 5.</li>
     <li>No location, contacts, messages, call logs, or browsing history.</li>
-    <li>No account — we couldn't tie data to you even if we wanted to.</li>
+    <li>No account — you never give us your name or email to use the app.</li>
   </ul>
 
   <h2>Permissions the app asks for</h2>
@@ -77,13 +101,14 @@
   <p>CalmClick is made and provided by <strong>Vladimir Skromny</strong>, a private individual based in Switzerland, who is the data controller for the limited processing described in this policy. You can reach the controller at <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>.</p>
 
   <h2>Our legal basis</h2>
-  <p>For users in the EU and EEA, we rely on the GDPR: we process the photo you submit to carry out the check you have asked for (Article 6(1)(b) — a service you request), and to keep the service secure and prevent misuse (Article 6(1)(f) — our legitimate interest in a safe service). For users in Switzerland, the same processing is governed by the revised Federal Act on Data Protection (revDSG/nDSG). iOS asks for your consent before the app uses the camera or your photo library.</p>
+  <p>For users in the EU and EEA, we rely on the GDPR: we process the photo you submit to carry out the check you have asked for (Article 6(1)(b) — a service you request). We use the random app ID, or your IP address if no ID is available, to count checks per phone per day, based on our legitimate interest in keeping the free checks fair and preventing misuse (Article 6(1)(f)). For users in Switzerland, the same processing is governed by the revised Federal Act on Data Protection (revDSG/nDSG); for the daily counter we rely on our overriding interest in fair use and abuse prevention (Article 31 revDSG/nDSG). iOS asks for your consent before the app uses the camera or your photo library.</p>
 
   <h2>Where your photo is processed</h2>
-  <p>While a photo is being checked, it passes through our relay server, hosted by <strong>Vercel Inc.</strong>, and on to <strong>OpenAI, L.L.C.</strong> Both are companies in the United States, so your photo is processed there; OpenAI may keep it for up to 30 days, then deletes it. OpenAI relies on the <strong>Standard Contractual Clauses</strong> in its data-processing terms, together with the <strong>Swiss addendum</strong> recognised by the Swiss Federal Data Protection and Information Commissioner. Vercel is <strong>certified under the EU-U.S. and Swiss-U.S. Data Privacy Framework</strong>. Neither company keeps your photo beyond the short periods described in section 1 above.</p>
+  <p>While a photo is being checked, it passes through our relay, run by <strong>Cloudflare, Inc.</strong>, and on to <strong>OpenAI, L.L.C.</strong> Both are companies in the United States, so your photo is processed there; OpenAI may keep it for up to 30 days, then deletes it; the daily counter described in section 5 is also held by Cloudflare. OpenAI relies on the <strong>Standard Contractual Clauses</strong> in its data-processing terms, together with the <strong>Swiss addendum</strong> recognised by the Swiss Federal Data Protection and Information Commissioner. Cloudflare relies on the <strong>Standard Contractual Clauses</strong> in its data processing addendum, together with the <strong>Swiss addendum</strong>. Neither company keeps your photo beyond the periods described in section 1 above.</p>
 
   <h2>Your rights</h2>
   <p>You can ask to see any personal data relating to you, and to have it corrected, deleted, or its processing restricted; you can object to processing; and you can ask to receive your data in a portable form. Because your checks, history and profile are kept only on your device, you can already view, export and delete all of them yourself inside the app. For the brief processing that happens at OpenAI, email <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a> and we will help.</p>
+  <p><strong>Your right to object to the daily counter</strong> (Article 21 GDPR; revDSG/nDSG): you can object at any time. In practice, simply stop running checks, or email <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>. Either way, the counter for your phone is deleted within 2 days.</p>
   <p>If you believe your data has been handled improperly, you may lodge a complaint with the Swiss Federal Data Protection and Information Commissioner (FDPIC / EDÖB, <a href="https://www.edoeb.admin.ch">www.edoeb.admin.ch</a>) or, in the EU/EEA, with your local data protection authority.</p>
 
   <h2>Changes to this policy</h2>
