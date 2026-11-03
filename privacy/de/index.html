@@ -25,7 +25,7 @@
 <div class="wrap">
 <article class="policy">
   <h1>Datenschutzerklärung</h1>
-  <p class="updated">Gültig ab: 3. November 2026</p>
+  <p class="updated">Gültig ab: [Veröffentlichungsdatum]</p>
 
   <p>CalmClick hilft Ihnen, verwirrende Dinge auf Ihrem Bildschirm zu verstehen — verdächtige SMS, seltsame Rechnungen, beängstigende Pop-ups —, indem es ein Foto, das Sie aufnehmen, in einfacher Sprache erklärt. Diese Erklärung beschreibt, in derselben einfachen Sprache, welche Informationen die App verarbeitet und was damit geschieht.</p>
 
@@ -35,13 +35,13 @@
     <li>Die App <strong>überwacht Ihr Telefon niemals</strong>. Sie liest niemals Ihre Nachrichten, E-Mails, Anrufe, Kontakte oder Ihren Standort. Sie sieht nur ein Foto, das Sie bewusst aufnehmen oder auswählen.</li>
     <li>Ihre Ergebnisse und Ihr Verlauf werden <strong>ausschliesslich auf Ihrem Gerät gespeichert</strong>; wir bewahren davon keine Kopie auf irgendeinem Server auf.</li>
     <li>Ein Foto, das Sie prüfen, wird <strong>einmalig und ausschliesslich zur Analyse sicher an einen KI-Dienst (OpenAI) gesendet</strong>, wird nicht zum Training von KI-Modellen verwendet und kann von OpenAI bis zu 30 Tage zur Missbrauchserkennung aufbewahrt werden; danach wird es gelöscht.</li>
-    <li>Damit die kostenlosen Prüfungen fair bleiben, sendet die App mit jeder Prüfung eine <strong>zufällige ID für diese App</strong>, damit unser Relay zählen kann, wie viele Prüfungen pro Tag von einem Telefon kommen. Sie ist weder Ihr Name noch Ihr Konto, wird nicht für Tracking oder Werbung verwendet, und der Zähler wird innerhalb von 2 Tagen nach Ihrer letzten Prüfung gelöscht.</li>
+    <li>Damit die kostenlosen Prüfungen fair bleiben, sendet die App mit jeder Prüfung <strong>eine ID, die iOS unseren Apps auf Ihrem Telefon zuweist</strong>, damit unser Relay zählen kann, wie viele Prüfungen pro Tag von einem Telefon kommen. Sie ist weder Ihr Name noch Ihr Konto, wird nicht für Tracking oder Werbung verwendet, und ID und Zähler werden innerhalb von 2 Tagen nach Ihrer letzten Prüfung gelöscht.</li>
   </ul>
 
   <h2>Welche Informationen die App verarbeitet</h2>
 
   <h2>1. Fotos, die Sie zur Prüfung auswählen</h2>
-  <p>Wenn Sie auf die Schaltfläche tippen und ein Foto aufnehmen (oder eines aus Ihrer Mediathek auswählen), wird dieses Foto über eine verschlüsselte Verbindung, über unseren Relay-Server, an die API von OpenAI gesendet, die das Bild liest und die Erklärung erzeugt, die Sie sehen. Zusammen mit dem Foto sendet die App die in Abschnitt 5 beschriebene zufällige App-ID. Sonst verlässt nichts Ihr Telefon.</p>
+  <p>Wenn Sie auf die Schaltfläche tippen und ein Foto aufnehmen (oder eines aus Ihrer Mediathek auswählen), wird dieses Foto über eine verschlüsselte Verbindung, über unseren Relay-Server, an die API von OpenAI gesendet, die das Bild liest und die Erklärung erzeugt, die Sie sehen. Zusammen mit dem Foto sendet die App die in Abschnitt 5 beschriebene Geräte-ID. Sonst verlässt nichts Ihr Telefon.</p>
   <ul>
     <li>Unser Relay-Server <strong>bewahrt keine Kopie Ihres Fotos auf</strong> — er leitet es weiter und gibt die Antwort zurück. Der Relay läuft bei <strong>Cloudflare</strong> (Cloudflare, Inc.). Wie jeder Netzwerkanbieter verarbeitet Cloudflare technische Verbindungsdaten wie Ihre IP-Adresse und den Zeitpunkt der Anfrage, um den Dienst bereitzustellen und zu schützen. Die Protokollierung von Anfragen durch Cloudflare haben wir für unseren Relay ausgeschaltet.</li>
     <li>OpenAI verarbeitet das Foto, um die Erklärung zu erstellen. Gemäss den API-Bedingungen werden Inhalte <strong>nicht zum Training von KI-Modellen verwendet</strong> und bis zu 30 Tage zur Missbrauchserkennung aufbewahrt und danach gelöscht. Mehr dazu finden Sie in den Richtlinien von OpenAI.</li>
@@ -57,12 +57,13 @@
   <h2>4. Vertrauensperson und Profilangaben</h2>
   <p>Wenn Sie (oder ein Familienmitglied) einen Namen, eine Spracheinstellung oder die Telefonnummer oder E-Mail-Adresse einer Vertrauensperson in der App hinterlegen, werden diese Angaben <strong>ausschliesslich auf Ihrem Gerät</strong> gespeichert. Sie werden niemals irgendwohin hochgeladen. Anrufe oder Nachrichten an Ihre Vertrauensperson erfolgen über die normalen Telefon- und Nachrichten-Apps Ihres Telefons.</p>
 
-  <h2>5. Eine zufällige ID für diese App, damit kostenlose Prüfungen fair bleiben</h2>
-  <p>Mit jeder Prüfung sendet die App unserem Relay eine zufällige ID, die iOS für diese App erzeugt (Apples «Identifier for Vendor»). Der Relay verwendet sie nur für einen Zweck: um zu zählen, wie viele Prüfungen pro Tag von einem Telefon kommen, damit die kostenlosen Prüfungen für alle fair bleiben und der Dienst vor Missbrauch geschützt ist.</p>
+  <h2>5. Eine Geräte-ID von iOS, damit kostenlose Prüfungen fair bleiben</h2>
+  <p>Mit jeder Prüfung sendet die App unserem Relay eine ID, die iOS allen Apps desselben Entwicklers auf Ihrem Telefon zuweist (Apples «Identifier for Vendor»). Der Relay verwendet sie nur für einen Zweck: um zu zählen, wie viele Prüfungen pro Tag von einem Telefon kommen, damit die kostenlosen Prüfungen für alle fair bleiben und der Dienst vor Missbrauch geschützt ist.</p>
   <ul>
     <li>Sie ist <strong>weder Ihr Name noch Ihr Konto, Ihre E-Mail-Adresse oder eine Werbe-ID</strong>. Sie wird nicht für Tracking oder Werbung verwendet.</li>
-    <li>Wir speichern sie nicht zusammen mit Ihrem Foto und verknüpfen sie nicht mit Ihrem Namen oder einem Konto.</li>
-    <li>Sie <strong>wird zurückgesetzt, wenn Sie die App löschen</strong>.</li>
+    <li>Wir speichern sie nicht zusammen mit Ihrem Foto. Wir kennen weder Ihren Namen noch Ihre E-Mail-Adresse noch ein Konto von Ihnen, daher gibt es nichts, womit sie verbunden werden könnte.</li>
+    <li>Sie ist in all unseren Apps auf Ihrem Telefon dieselbe; <strong>wenn Sie nur CalmClick löschen, ändert sie sich also nicht</strong>. iOS vergibt eine neue, wenn alle unsere Apps vom Telefon entfernt wurden und eine davon erneut installiert wird; auch ein neues Telefon erhält eine neue.</li>
+    <li>Von unseren Apps sendet nur CalmClick diese ID an uns, und wir führen sie nicht mit Daten aus unseren anderen Apps zusammen. Sollte sich das ändern, passen wir diese Erklärung vorher an.</li>
     <li>Ist die ID nicht verfügbar, zählt der Relay die Prüfungen stattdessen auf dieselbe Weise anhand Ihrer <strong>IP-Adresse</strong>.</li>
     <li>Der Relay speichert nur die ID (oder IP-Adresse) und die Anzahl der Prüfungen des aktuellen Tages (UTC). Dieser Zähler wird <strong>innerhalb von 2 Tagen (48 Stunden) nach der letzten Prüfung dieses Telefons automatisch gelöscht</strong>.</li>
   </ul>
@@ -71,7 +72,7 @@
   <h2>6. Was wir nicht erheben</h2>
   <ul>
     <li>Keine Analyse oder Nutzungsverfolgung jeglicher Art.</li>
-    <li>Keine Werbe-IDs, keine Tracker von Dritten. Die einzige Kennung, die die App sendet, ist die zufällige App-ID aus Abschnitt 5.</li>
+    <li>Keine Werbe-IDs, keine Tracker von Dritten. Die einzige Kennung, die die App sendet, ist die Geräte-ID aus Abschnitt 5.</li>
     <li>Keinen Standort, keine Kontakte, Nachrichten, Anrufprotokolle oder Ihren Browserverlauf.</li>
     <li>Kein Konto — Sie müssen uns weder Ihren Namen noch Ihre E-Mail-Adresse angeben, um die App zu nutzen.</li>
   </ul>
@@ -89,7 +90,7 @@
   <p>CalmClick wird von <strong>Vladimir Skromny</strong>, einer Privatperson mit Sitz in der Schweiz, erstellt und bereitgestellt; er ist der Verantwortliche für die in dieser Erklärung beschriebene begrenzte Verarbeitung. Sie erreichen den Verantwortlichen unter <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>.</p>
 
   <h2>Unsere Rechtsgrundlage</h2>
-  <p>Für Nutzerinnen und Nutzer in der EU und im EWR stützen wir uns auf die DSGVO: Wir verarbeiten das von Ihnen übermittelte Foto, um die von Ihnen angeforderte Prüfung durchzuführen (Art. 6 Abs. 1 lit. b — ein von Ihnen angeforderter Dienst). Die zufällige App-ID, oder Ihre IP-Adresse, falls keine ID verfügbar ist, verwenden wir, um die Prüfungen pro Telefon und Tag zu zählen; dies stützt sich auf unser berechtigtes Interesse, die kostenlosen Prüfungen fair zu halten und Missbrauch zu verhindern (Art. 6 Abs. 1 lit. f). Für Nutzerinnen und Nutzer in der Schweiz unterliegt dieselbe Verarbeitung dem revidierten Schweizer Datenschutzgesetz (revDSG/nDSG); für den täglichen Zähler stützen wir uns auf unser überwiegendes Interesse an fairer Nutzung und Missbrauchsverhinderung (Art. 31 revDSG/nDSG). iOS fragt nach Ihrer Zustimmung, bevor die App die Kamera oder Ihre Fotomediathek verwendet.</p>
+  <p>Für Nutzerinnen und Nutzer in der EU und im EWR stützen wir uns auf die DSGVO: Wir verarbeiten das von Ihnen übermittelte Foto, um die von Ihnen angeforderte Prüfung durchzuführen (Art. 6 Abs. 1 lit. b — ein von Ihnen angeforderter Dienst). Die Geräte-ID, oder Ihre IP-Adresse, falls keine ID verfügbar ist, verwenden wir, um die Prüfungen pro Telefon und Tag zu zählen; dies stützt sich auf unser berechtigtes Interesse, die kostenlosen Prüfungen fair zu halten und Missbrauch zu verhindern (Art. 6 Abs. 1 lit. f). Für Nutzerinnen und Nutzer in der Schweiz unterliegt dieselbe Verarbeitung dem revidierten Schweizer Datenschutzgesetz (revDSG/nDSG); für den täglichen Zähler stützen wir uns auf unser überwiegendes Interesse an fairer Nutzung und Missbrauchsverhinderung (Art. 31 revDSG/nDSG). iOS fragt nach Ihrer Zustimmung, bevor die App die Kamera oder Ihre Fotomediathek verwendet.</p>
 
   <h2>Wo Ihr Foto verarbeitet wird</h2>
   <p>Während ein Foto geprüft wird, läuft es über unseren Relay, der von <strong>Cloudflare, Inc.</strong> betrieben wird, und weiter zu <strong>OpenAI, L.L.C.</strong> Beide sind Unternehmen in den Vereinigten Staaten, sodass Ihr Foto dort verarbeitet wird; OpenAI kann es bis zu 30 Tage aufbewahren und löscht es danach; auch der in Abschnitt 5 beschriebene tägliche Zähler liegt bei Cloudflare. Mit OpenAI besteht ein gültiger Auftragsverarbeitungsvertrag; er umfasst die <strong>Standardvertragsklauseln</strong>, zusammen mit dem vom Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten anerkannten <strong>Schweizer Zusatz</strong>. Cloudflare stützt sich auf die <strong>Standardvertragsklauseln</strong> in seinem Auftragsverarbeitungsvertrag, der Bestandteil seiner Self-Serve-Nutzungsbedingungen ist, zusammen mit dem <strong>Schweizer Zusatz</strong>. Keines der beiden Unternehmen bewahrt Ihr Foto über die in Abschnitt 1 oben beschriebenen Fristen hinaus auf.</p>

@@ -25,7 +25,7 @@
 <div class="wrap">
 <article class="policy">
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective date: 3 November 2026</p>
+  <p class="updated">Effective date: [publish date]</p>
 
   <p>CalmClick helps you understand confusing things on your screen — suspicious texts, odd bills, scary pop-ups — by explaining a photo you take in plain language. This policy explains, in the same plain language, what information the app handles and what happens to it.</p>
 
@@ -35,13 +35,13 @@
     <li>The app <strong>never monitors your phone</strong>. It never reads your messages, email, calls, contacts, or location. It only sees a photo you deliberately take or choose.</li>
     <li>Your results and history are <strong>stored only on your device</strong>; we keep no copy of them on any server.</li>
     <li>A photo you check is <strong>sent securely to an AI service (OpenAI) once, only to be analyzed</strong>, is not used to train AI models, and may be kept by OpenAI for up to 30 days for abuse monitoring, then deleted.</li>
-    <li>To keep the free checks fair, the app sends a <strong>random ID for this app</strong> along with each check, so our relay can count how many checks come from one phone each day. It is not your name or account, it is not used for tracking or advertising, and the count is deleted within 2 days after your last check.</li>
+    <li>To keep the free checks fair, the app sends <strong>an ID that iOS gives our apps on your phone</strong> along with each check, so our relay can count how many checks come from one phone each day. It is not your name or account, it is not used for tracking or advertising, and the ID and the count are deleted within 2 days after your last check.</li>
   </ul>
 
   <h2>What information the app handles</h2>
 
   <h2>1. Photos you choose to check</h2>
-  <p>When you tap the button and take a photo (or pick one from your library), that photo is sent over an encrypted connection, through our relay server, to OpenAI's API, which reads the image and produces the explanation you see. Together with the photo, the app sends the random app ID described in section 5. Nothing else leaves your phone.</p>
+  <p>When you tap the button and take a photo (or pick one from your library), that photo is sent over an encrypted connection, through our relay server, to OpenAI's API, which reads the image and produces the explanation you see. Together with the photo, the app sends the device ID described in section 5. Nothing else leaves your phone.</p>
   <ul>
     <li>Our relay server keeps <strong>no copy of your photo</strong> — it passes it along and returns the answer. The relay runs on <strong>Cloudflare</strong> (Cloudflare, Inc.). Like any network provider, Cloudflare processes technical connection data, such as your IP address and the time of the request, to deliver and protect the service. We have switched off Cloudflare's request logging for our relay.</li>
     <li>OpenAI processes the photo to generate the explanation. Under its API terms, content is <strong>not used to train AI models</strong> and is retained for up to 30 days for abuse monitoring, then deleted. You can read more in OpenAI's own policies.</li>
@@ -57,12 +57,13 @@
   <h2>4. Trusted contact and profile details</h2>
   <p>If you (or a family member) add a name, language preference, or a trusted person's phone or email in the app, those details are stored <strong>only on your device</strong>. They are never uploaded anywhere. Calling or texting your trusted person happens through your phone's normal Phone and Messages apps.</p>
 
-  <h2>5. A random ID for this app, to keep free checks fair</h2>
-  <p>With each check, the app sends our relay a random ID that iOS creates for this app (Apple's "identifier for vendor"). The relay uses it for one thing only: to count how many checks come from one phone each day, so the free checks stay fair for everyone and the service is protected from misuse.</p>
+  <h2>5. A device ID from iOS, to keep free checks fair</h2>
+  <p>With each check, the app sends our relay an ID that iOS gives to all apps from the same developer on your phone (Apple's "identifier for vendor"). The relay uses it for one thing only: to count how many checks come from one phone each day, so the free checks stay fair for everyone and the service is protected from misuse.</p>
   <ul>
     <li>It is <strong>not your name, account, email, or an advertising ID</strong>. It is not used for tracking or advertising.</li>
-    <li>We do not store it with your photo or link it to your name or account.</li>
-    <li>It <strong>resets if you delete the app</strong>.</li>
+    <li>We do not store it with your photo. We have no name, email or account for you, so there is nothing to connect it to.</li>
+    <li>It is the same in all of our apps on your phone, so <strong>deleting CalmClick alone does not change it</strong>. iOS gives a new one when all of our apps have been removed from the phone and one is installed again; a new phone also gets a new one.</li>
+    <li>Of our apps, only CalmClick sends this ID to us, and we do not combine it with data from our other apps. If that ever changes, we will update this policy before it happens.</li>
     <li>If the ID is not available, the relay counts checks by your <strong>IP address</strong> instead, in the same way.</li>
     <li>The relay keeps only the ID (or IP address) and the number of checks for the current day (UTC). This counter is <strong>deleted automatically within 2 days (48 hours) after that phone's last check</strong>.</li>
   </ul>
@@ -71,7 +72,7 @@
   <h2>6. What we don't collect</h2>
   <ul>
     <li>No analytics or usage tracking of any kind.</li>
-    <li>No advertising identifiers, no third-party trackers. The only identifier the app sends is the random app ID in section 5.</li>
+    <li>No advertising identifiers, no third-party trackers. The only identifier the app sends is the device ID in section 5.</li>
     <li>No location, contacts, messages, call logs, or browsing history.</li>
     <li>No account — you never give us your name or email to use the app.</li>
   </ul>
@@ -89,7 +90,7 @@
   <p>CalmClick is made and provided by <strong>Vladimir Skromny</strong>, a private individual based in Switzerland, who is the data controller for the limited processing described in this policy. You can reach the controller at <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>.</p>
 
   <h2>Our legal basis</h2>
-  <p>For users in the EU and EEA, we rely on the GDPR: we process the photo you submit to carry out the check you have asked for (Article 6(1)(b) — a service you request). We use the random app ID, or your IP address if no ID is available, to count checks per phone per day, based on our legitimate interest in keeping the free checks fair and preventing misuse (Article 6(1)(f)). For users in Switzerland, the same processing is governed by the revised Federal Act on Data Protection (revDSG/nDSG); for the daily counter we rely on our overriding interest in fair use and abuse prevention (Article 31 revDSG/nDSG). iOS asks for your consent before the app uses the camera or your photo library.</p>
+  <p>For users in the EU and EEA, we rely on the GDPR: we process the photo you submit to carry out the check you have asked for (Article 6(1)(b) — a service you request). We use the device ID, or your IP address if no ID is available, to count checks per phone per day, based on our legitimate interest in keeping the free checks fair and preventing misuse (Article 6(1)(f)). For users in Switzerland, the same processing is governed by the revised Federal Act on Data Protection (revDSG/nDSG); for the daily counter we rely on our overriding interest in fair use and abuse prevention (Article 31 revDSG/nDSG). iOS asks for your consent before the app uses the camera or your photo library.</p>
 
   <h2>Where your photo is processed</h2>
   <p>While a photo is being checked, it passes through our relay, run by <strong>Cloudflare, Inc.</strong>, and on to <strong>OpenAI, L.L.C.</strong> Both are companies in the United States, so your photo is processed there; OpenAI may keep it for up to 30 days, then deletes it; the daily counter described in section 5 is also held by Cloudflare. A data processing agreement with OpenAI is in force; it includes the <strong>Standard Contractual Clauses</strong>, together with the <strong>Swiss addendum</strong> recognised by the Swiss Federal Data Protection and Information Commissioner. Cloudflare relies on the <strong>Standard Contractual Clauses</strong> in its data processing addendum, incorporated in its self-serve terms, together with the <strong>Swiss addendum</strong>. Neither company keeps your photo beyond the periods described in section 1 above.</p>
