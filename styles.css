@@ -468,7 +468,8 @@ section p.sub { color: var(--text-2); margin: 0 0 30px; font-size: 20px; }
 }
 .privacy-banner ul { margin: 14px 0 0; padding-left: 24px; color: var(--text-2); }
 .privacy-banner li { margin: 8px 0; }
-.privacy-banner a { color: var(--accent-soft); font-weight: 600; }
+.privacy-banner a { color: var(--accent); font-weight: 600; }
+@media (prefers-color-scheme: dark) { .privacy-banner a { color: #8AB4F0; } }
 
 .cta-band {
   text-align: center; border-radius: 30px; padding: 52px 32px;
