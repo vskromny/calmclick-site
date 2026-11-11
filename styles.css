@@ -121,6 +121,8 @@ header.site nav a:hover { color: var(--accent-soft); }
   box-shadow: var(--shadow); transition: transform .2s ease, border-color .2s ease;
 }
 .ghost-btn:hover { transform: translateY(-2px); border-color: var(--accent-soft); }
+.ghost-btn { color: var(--accent); }
+@media (prefers-color-scheme: dark) { .ghost-btn { color: #8AB4F0; } }
 
 /* ---------- hero ---------- */
 
