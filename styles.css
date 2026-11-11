@@ -491,17 +491,20 @@ section p.sub { color: var(--text-2); margin: 0 0 30px; font-size: 20px; }
 
 footer.site {
   border-top: 1px solid var(--border);
-  padding: 34px 0 48px; color: var(--text-3); font-size: 16px;
+  padding: 34px 0 48px; color: var(--text-2); font-size: 16px;
   text-align: center; margin-top: 30px;
 }
-footer.site a { color: var(--text-3); }
+footer.site a { color: var(--text-2); white-space: nowrap; }
 
 /* Policy page */
 article.policy { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; margin: 44px auto; max-width: 820px; box-shadow: var(--shadow); }
 article.policy h1 { font-size: 34px; margin-top: 0; }
 article.policy h2 { font-size: 23px; margin-top: 34px; }
 article.policy p, article.policy li { color: var(--text-2); font-size: 18px; }
-article.policy .updated { color: var(--text-3); font-size: 16px; }
+article.policy .updated { color: var(--text-2); font-size: 16px; }
+/* Link + small-text contrast (head-of-design 10.11): default #0000EE was 1.72:1 on the dark card. */
+article.policy a:not(.appstore) { color: var(--accent); }
+@media (prefers-color-scheme: dark) { article.policy a:not(.appstore) { color: #8AB4F0; } }
 
 /* ---------- scroll reveal ---------- */
 
