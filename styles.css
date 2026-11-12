@@ -100,7 +100,8 @@ header.site nav a:hover { color: var(--accent-soft); }
 .appstore .labels { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
 .appstore small { font-size: 11px; letter-spacing: .3px; opacity: .85; text-transform: none; }
 .appstore strong { font-size: 19px; font-weight: 600; letter-spacing: -0.2px; }
-.appstore--sm { margin-left: 20px; padding: 7px 15px 7px 13px; border-radius: 12px; }
+.appstore--sm { margin-left: 20px; padding: 7px 15px 7px 13px; border-radius: 12px;
+  box-sizing: border-box; min-height: 44px; }  /* tap target >= 44 px at every width */
 .appstore--sm .apple { width: 20px; height: 20px; }
 .appstore--sm small { font-size: 9px; }
 .appstore--sm strong { font-size: 15px; }
