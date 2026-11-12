@@ -550,7 +550,7 @@ article.policy a:not(.appstore) { color: var(--accent); }
 /* Narrow phones: brand name + three nav links overflow <=375 px and body overflow-x clips the language link.
    The icon carries the brand visually; the name stays in the accessibility tree. */
 @media (max-width: 420px) {
-  header.site .name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  header.site > .wrap > .name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 }
 
 @media (max-width: 380px) {
