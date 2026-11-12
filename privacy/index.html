@@ -35,7 +35,7 @@
     <li>The app <strong>never monitors your phone</strong>. It never reads your messages, email, calls, contacts, or location. It only sees a photo you deliberately take or choose.</li>
     <li>Your results and history are <strong>stored only on your device</strong>; we keep no copy of them on any server.</li>
     <li>A photo you check is <strong>sent securely to an AI service (OpenAI) once, only to be analyzed</strong>, is not used to train AI models, and may be kept by OpenAI for up to 30 days for abuse monitoring, then deleted.</li>
-    <li>To keep the free checks fair, the app sends <strong>an ID that iOS gives our apps on your phone</strong> along with each check, so our relay can count how many checks come from one phone, and from one network, each day. It is not your name or account, it is not used for tracking or advertising, and the ID and the count are deleted within 2 days after your last check.</li>
+    <li>To keep the free checks fair, the app sends <strong>an ID that iOS gives our apps on your phone</strong> along with each check, so our relay can count how many checks come from one phone, and from one network, each day. It is not your name or account, it is not used for tracking or advertising, and the ID and the counts are deleted within 2 days after your last check.</li>
   </ul>
 
   <h2>What information the app handles</h2>
@@ -43,7 +43,8 @@
   <h2>1. Photos you choose to check</h2>
   <p>When you tap the button and take a photo (or pick one from your library), that photo is sent over an encrypted connection, through our relay server, to OpenAI's API, which reads the image and produces the explanation you see. Together with the photo, the app sends the device ID described in section 5. Nothing else leaves your phone.</p>
   <ul>
-    <li>Our relay server keeps <strong>no copy of your photo</strong> — it passes it along and returns the answer. The relay runs on <strong>Cloudflare</strong> (Cloudflare, Inc.). Like any network provider, Cloudflare processes technical connection data, such as your IP address and the time of the request, to deliver and protect the service. For each request, our relay writes one short technical log line: which service was called, whether it worked, the app and system version (user agent), the number of AI tokens used, and a code derived from your IP address with a secret key. The code can still link requests that come from the same network. We use these lines to keep the service working and to spot misuse, and Cloudflare deletes them automatically after at most 7 days. They contain no photo, no question, no answer and no device ID.</li>
+    <li>Our relay server keeps <strong>no copy of your photo</strong> — it passes it along and returns the answer. The relay runs on <strong>Cloudflare</strong> (Cloudflare, Inc.). Like any network provider, Cloudflare processes technical connection data, such as your IP address and the time of the request, to deliver and protect the service.</li>
+    <li>For each request, our relay writes one short technical log line: which service was called, whether it worked, the app and system version (user agent), the number of AI tokens used, and a code derived from your IP address with a secret key. The code can still link requests that come from the same network. We use these lines to keep the service working and to spot misuse, and <strong>Cloudflare deletes them automatically after at most 7 days</strong>. They contain no photo, no question, no answer and no device ID.</li>
     <li>OpenAI processes the photo to generate the explanation. Under its API terms, content is <strong>not used to train AI models</strong> and is retained for up to 30 days for abuse monitoring, then deleted. You can read more in OpenAI's own policies.</li>
     <li>A copy of the photo may be saved <strong>on your device</strong> together with the result, so you can look back at it. You can delete it at any time.</li>
   </ul>
@@ -65,13 +66,13 @@
     <li>It is the same in all of our apps on your phone, so <strong>deleting CalmClick alone does not change it</strong>. iOS gives a new one when all of our apps have been removed from the phone and one is installed again; a new phone also gets a new one.</li>
     <li>Of our apps, only CalmClick sends this ID to us, and we do not combine it with data from our other apps. If that ever changes, we will update this policy before it happens.</li>
     <li>The relay also counts checks per <strong>IP address</strong> in the same way, so that one network cannot use more than a set number of checks a day. Many people can share one IP address, so this limit is higher than the limit per phone.</li>
-    <li>The relay keeps only the ID and the IP address and the number of checks for the current day (UTC). These counters are <strong>deleted automatically within 2 days (48 hours) after the last check from that phone or network</strong>.</li>
+    <li>The relay keeps only the ID, the IP address and the number of checks for the current day (UTC). These counters are <strong>deleted automatically within 2 days (48 hours) after the last check from that phone or network</strong>.</li>
   </ul>
   <p>The app tells you about this ID in the short notice it shows before your first check.</p>
 
   <h2>6. What we don't collect</h2>
   <ul>
-    <li>No analytics or usage tracking of any kind.</li>
+    <li>No analytics tools and no tracking across other apps or websites. Our relay keeps only the daily counters (section 5) and the short log lines (section 1).</li>
     <li>No advertising identifiers, no third-party trackers. The only identifier the app sends is the device ID in section 5.</li>
     <li>No location, contacts, messages, call logs, or browsing history.</li>
     <li>No account — you never give us your name or email to use the app.</li>
@@ -90,7 +91,7 @@
   <p>CalmClick is made and provided by <strong>Vladimir Skromny</strong>, a private individual based in Switzerland, who is the data controller for the limited processing described in this policy. You can reach the controller at <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>.</p>
 
   <h2>Our legal basis</h2>
-  <p>For users in the EU and EEA, we rely on the GDPR: we process the photo you submit to carry out the check you have asked for (Article 6(1)(b) — a service you request). We use the device ID and your IP address, to count checks per phone and per network each day, based on our legitimate interest in keeping the free checks fair and preventing misuse (Article 6(1)(f)). The technical log lines in section 1 rest on the same legitimate interest (operating the service securely, Article 6(1)(f)). For users in Switzerland, the same processing is governed by the revised Federal Act on Data Protection (revDSG/nDSG); for the daily counter and the log lines we rely on our overriding interest in fair use and abuse prevention (Article 31 revDSG/nDSG). iOS asks for your consent before the app uses the camera or your photo library.</p>
+  <p>For users in the EU and EEA, we rely on the GDPR: we process the photo you submit to carry out the check you have asked for (Article 6(1)(b) — a service you request). We use the device ID and your IP address to count checks per phone and per network each day, based on our legitimate interest in keeping the free checks fair and preventing misuse (Article 6(1)(f)). The technical log lines in section 1 rest on the same legitimate interest (operating the service securely, Article 6(1)(f)). For users in Switzerland, the same processing is governed by the revised Federal Act on Data Protection (revDSG/nDSG); for the daily counter and the log lines we rely on our overriding interest in fair use and abuse prevention (Article 31 revDSG/nDSG). iOS asks for your consent before the app uses the camera or your photo library.</p>
   <p>Photos can show other people's details, such as a sender's name or phone number. We process them only to produce the explanation you asked for, based on our legitimate interest in providing that check (GDPR Article 6(1)(f); Article 31 revDSG/nDSG). Our relay keeps no copy. If you think your details appear in a photo and want to ask about it, email <a href="mailto:v.skromny@gmail.com">v.skromny@gmail.com</a>.</p>
   <p>CalmClick is not built for health information or identity documents. If a photo contains such information, it is processed in the same way and with the same limits.</p>
 

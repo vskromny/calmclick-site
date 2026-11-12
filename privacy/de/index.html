@@ -43,7 +43,8 @@
   <h2>1. Fotos, die Sie zur Prüfung auswählen</h2>
   <p>Wenn Sie auf die Schaltfläche tippen und ein Foto aufnehmen (oder eines aus Ihrer Mediathek auswählen), wird dieses Foto über eine verschlüsselte Verbindung, über unseren Relay-Server, an die API von OpenAI gesendet, die das Bild liest und die Erklärung erzeugt, die Sie sehen. Zusammen mit dem Foto sendet die App die in Abschnitt 5 beschriebene Geräte-ID. Sonst verlässt nichts Ihr Telefon.</p>
   <ul>
-    <li>Unser Relay-Server <strong>bewahrt keine Kopie Ihres Fotos auf</strong> — er leitet es weiter und gibt die Antwort zurück. Der Relay läuft bei <strong>Cloudflare</strong> (Cloudflare, Inc.). Wie jeder Netzwerkanbieter verarbeitet Cloudflare technische Verbindungsdaten wie Ihre IP-Adresse und den Zeitpunkt der Anfrage, um den Dienst bereitzustellen und zu schützen. Für jede Anfrage schreibt unser Weiterleitungsserver (Relay) eine kurze technische Protokollzeile: welcher Dienst aufgerufen wurde, ob es funktioniert hat, die App- und Systemversion (User-Agent), die Anzahl der verwendeten KI-Tokens und einen Code, der mit einem geheimen Schlüssel aus Ihrer IP-Adresse abgeleitet wird. Über diesen Code lassen sich Anfragen aus demselben Netzwerk weiterhin miteinander verknüpfen. Wir nutzen diese Zeilen, um den Dienst am Laufen zu halten und Missbrauch zu erkennen; Cloudflare löscht sie spätestens nach 7 Tagen automatisch. Sie enthalten kein Foto, keine Frage, keine Antwort und keine Geräte-ID.</li>
+    <li>Unser Relay-Server <strong>bewahrt keine Kopie Ihres Fotos auf</strong> — er leitet es weiter und gibt die Antwort zurück. Der Relay läuft bei <strong>Cloudflare</strong> (Cloudflare, Inc.). Wie jeder Netzwerkanbieter verarbeitet Cloudflare technische Verbindungsdaten wie Ihre IP-Adresse und den Zeitpunkt der Anfrage, um den Dienst bereitzustellen und zu schützen.</li>
+    <li>Für jede Anfrage schreibt unser Relay eine kurze technische Protokollzeile: welcher Dienst aufgerufen wurde, ob es funktioniert hat, die App- und Systemversion (User-Agent), die Anzahl der verwendeten KI-Tokens und einen Code, der mit einem geheimen Schlüssel aus Ihrer IP-Adresse abgeleitet wird. Über diesen Code lassen sich Anfragen aus demselben Netzwerk weiterhin miteinander verknüpfen. Wir nutzen diese Zeilen, um den Dienst am Laufen zu halten und Missbrauch zu erkennen; <strong>Cloudflare löscht sie spätestens nach 7 Tagen automatisch</strong>. Sie enthalten kein Foto, keine Frage, keine Antwort und keine Geräte-ID.</li>
     <li>OpenAI verarbeitet das Foto, um die Erklärung zu erstellen. Gemäss den API-Bedingungen werden Inhalte <strong>nicht zum Training von KI-Modellen verwendet</strong> und bis zu 30 Tage zur Missbrauchserkennung aufbewahrt und danach gelöscht. Mehr dazu finden Sie in den Richtlinien von OpenAI.</li>
     <li>Eine Kopie des Fotos kann zusammen mit dem Ergebnis <strong>auf Ihrem Gerät</strong> gespeichert werden, damit Sie es später ansehen können. Sie können es jederzeit löschen.</li>
   </ul>
@@ -65,13 +66,13 @@
     <li>Sie ist in all unseren Apps auf Ihrem Telefon dieselbe; <strong>wenn Sie nur CalmClick löschen, ändert sie sich also nicht</strong>. iOS vergibt eine neue, wenn alle unsere Apps vom Telefon entfernt wurden und eine davon erneut installiert wird; auch ein neues Telefon erhält eine neue.</li>
     <li>Von unseren Apps sendet nur CalmClick diese ID an uns, und wir führen sie nicht mit Daten aus unseren anderen Apps zusammen. Sollte sich das ändern, passen wir diese Erklärung vorher an.</li>
     <li>Der Relay zählt die Prüfungen auf dieselbe Weise auch pro Netzwerk (<strong>IP-Adresse</strong>), damit ein einzelnes Netzwerk nicht mehr als eine festgelegte Anzahl Prüfungen pro Tag nutzen kann. Viele Menschen können sich eine IP-Adresse teilen; deshalb liegt diese Grenze höher als die Grenze pro Telefon.</li>
-    <li>Der Relay speichert nur die ID und die IP-Adresse und die Anzahl der Prüfungen des aktuellen Tages (UTC). Diese Zähler werden <strong>innerhalb von 2 Tagen (48 Stunden) nach der letzten Prüfung von diesem Telefon oder Netzwerk automatisch gelöscht</strong>.</li>
+    <li>Der Relay speichert nur die ID, die IP-Adresse und die Anzahl der Prüfungen des aktuellen Tages (UTC). Diese Zähler werden <strong>innerhalb von 2 Tagen (48 Stunden) nach der letzten Prüfung von diesem Telefon oder Netzwerk automatisch gelöscht</strong>.</li>
   </ul>
   <p>Die App informiert Sie über diese ID im kurzen Hinweis, den sie vor Ihrer ersten Prüfung anzeigt.</p>
 
   <h2>6. Was wir nicht erheben</h2>
   <ul>
-    <li>Keine Analyse oder Nutzungsverfolgung jeglicher Art.</li>
+    <li>Keine Analyse-Tools und kein Tracking über andere Apps oder Websites hinweg. Unser Relay speichert nur die täglichen Zähler (Abschnitt 5) und die kurzen Protokollzeilen (Abschnitt 1).</li>
     <li>Keine Werbe-IDs, keine Tracker von Dritten. Die einzige Kennung, die die App sendet, ist die Geräte-ID aus Abschnitt 5.</li>
     <li>Keinen Standort, keine Kontakte, Nachrichten, Anrufprotokolle oder Ihren Browserverlauf.</li>
     <li>Kein Konto — Sie müssen uns weder Ihren Namen noch Ihre E-Mail-Adresse angeben, um die App zu nutzen.</li>
