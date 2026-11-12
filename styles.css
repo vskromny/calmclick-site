@@ -517,7 +517,8 @@ article.policy a:not(.appstore) { color: var(--accent); }
 /* ---------- responsive ---------- */
 
 @media (max-width: 940px) {
-  .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); text-align: center; gap: 24px; }
+  .hero-device { min-width: 0; }  /* stage keeps its 300 px layout box; it may overflow this column, centred */
   .hero-copy { max-width: 640px; margin: 0 auto; }
   .cta-row, .trust { justify-content: center; }
   header.site nav:not(:last-child) { display: none; }
