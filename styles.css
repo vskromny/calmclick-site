@@ -557,6 +557,10 @@ article.policy a:not(.appstore) { color: var(--accent); }
 
 @media (max-width: 380px) {
   .stage { transform: scale(.74); margin-bottom: -100px; }
+  /* #781: header badge must not wrap; brand + badge fit 272 px */
+  header.site .appstore--sm { flex: none; padding: 6px 11px 6px 9px; }
+  header.site .appstore--sm .labels { white-space: nowrap; }
+  header.site .brand .name { font-size: 17px; }
 }
 
 /* ---------- reduced motion ---------- */
