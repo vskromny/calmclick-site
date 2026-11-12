@@ -517,6 +517,10 @@ nav.xlinks ul { list-style: none; padding-left: 0; margin: 12px 0 0; }
 nav.xlinks li { border-top: 1px solid var(--border); }
 nav.xlinks a { display: block; padding: 10px 0; line-height: 1.4; }
 
+article.policy > ul { padding-left: 1.4em; }
+article.policy > ul > li { margin-bottom: 10px; padding-left: 2px; }
+article.policy > ul > li::marker { color: var(--text); }
+
 /* ---------- scroll reveal ---------- */
 
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.22, 1, .36, 1); }
