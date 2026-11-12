@@ -518,7 +518,8 @@ article.policy a:not(.appstore) { color: var(--accent); }
 
 @media (max-width: 940px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); text-align: center; gap: 24px; }
-  .hero-device { min-width: 0; }  /* stage keeps its 300 px layout box; it may overflow this column, centred */
+  .hero-device { min-width: 0; }  /* column may be narrower than the stage */
+  .hero-device .stage { flex: none; }  /* stage keeps its 300 px box and overflows the column, centred */
   .hero-copy { max-width: 640px; margin: 0 auto; }
   .cta-row, .trust { justify-content: center; }
   header.site nav:not(:last-child) { display: none; }
