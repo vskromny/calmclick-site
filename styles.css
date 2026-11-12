@@ -543,6 +543,7 @@ article.policy a:not(.appstore) { color: var(--accent); }
   section p.sub { font-size: 18px; }
   .cta-band { padding: 40px 22px; border-radius: 24px; }
   article.policy { padding: 26px; }
+  article.policy h1 { font-size: 28px; -webkit-hyphens: auto; hyphens: auto; overflow-wrap: break-word; }
   .stage { transform: scale(.86); transform-origin: top center; margin-bottom: -20px; }
 }
 
