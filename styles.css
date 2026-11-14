@@ -498,7 +498,9 @@ footer.site {
   padding: 34px 0 48px; color: var(--text-2); font-size: 16px;
   text-align: center; margin-top: 30px;
 }
-footer.site a { color: var(--text-2); white-space: nowrap; display: inline-block; padding: 13px 0; }
+footer.site a { color: var(--text-2); white-space: nowrap; display: inline-block; padding: 9px 0; }
+footer.site p { margin: 0 0 12px; }
+footer.site p:last-child { margin: 12px 0 0; }
 
 /* Policy page */
 article.policy { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; margin: 44px auto; max-width: 820px; box-shadow: var(--shadow); }
